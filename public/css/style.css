@@ -1,0 +1,94 @@
+html {
+	background: deepskyblue;
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper-container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+#column {
+	margin: 0 auto;
+	display: block;
+	border: none;
+	border-radius: 8px;
+	width: 10.5ch;
+	font: 5ch droid sans mono, consolas, monospace;
+	letter-spacing: 0.5ch;
+	background: honeydew;
+	caret-color: transparent;
+	text-align: center;
+}
+
+#column:focus {
+	outline: none;
+	color: deepskyblue;
+}
+
+#get-index {
+	margin-top: 10px;
+	display: inline-block;
+	padding: 0.75rem 1.25rem;
+	border-radius: 10rem;
+	color: black;
+	text-transform: uppercase;
+	font-size: 1rem;
+	letter-spacing: 0.15rem;
+	transition: all 0.3s;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	z-index: 1;
+}
+
+#get-index::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: azure;
+	border-radius: 10rem;
+	z-index: -2;
+}
+
+#get-index::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	background-color: black;
+	transition: all 0.3s;
+	border-radius: 10rem;
+	z-index: -1;
+}
+
+#get-index:hover {
+	color: #fff;
+}
+
+#get-index:hover::before {
+	width: 100%;
+}
+
+#message {
+	margin-top: 25px;
+	text-align: center;
+	color: white;
+	font-size: 1.5rem;
+}
