@@ -39,7 +39,7 @@ const isValid = (str) => {
 const getIndex = (str) => {
 	const startsAt = 65;
 	const numberOfLetters = 26;
-	const charNumber = str.charCodeAt(0) % startsAt + 1;
+	const charNumber = str.charCodeAt(0) - startsAt + 1;
 
 	if (str.length === 1) {
   	 return charNumber;
